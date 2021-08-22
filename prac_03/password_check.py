@@ -2,7 +2,7 @@
 
 
 def main():
-    """"""
+    """Gets a password from the user and checks to make sure it is of valid length"""
     password = get_password()
     password_length = 6
 
