@@ -5,7 +5,7 @@ Emails program that stores users emails and names in a dictionary
 
 
 def main():
-    """Creates dictionary of emails with names"""
+    """Creates dictionary of emails with names """
     emails_with_names = {}
     email = input("Email: ")
     while email != "":
