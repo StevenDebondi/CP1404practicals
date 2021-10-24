@@ -1,6 +1,8 @@
 """
 CP1404/CP5632 Practical
 Cleanup Files
+
+Unfinished program, was able to fix the spaces into underscores but I'm not sure how to fix it for the others.
 """
 import shutil
 import os, os.path
@@ -15,7 +17,6 @@ def main():
             new_name = get_fixed_filename(filename)
             print("Renaming {} to {}".format(filename, new_name))
             name_name = os.path.join(directory_name, filename)
-            print(name_name)
             new_name = os.path.join(directory_name, get_fixed_filename(filename))
             os.rename(name_name, new_name)
 
@@ -23,8 +24,14 @@ def main():
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     spaced_name = filename.split(" ")
-    print(spaced_name)
-    new_name = "_".join(spaced_name)
+    new_name = "_".join(spaced_name).title()
+
+    for i, character in enumerate(filename):
+        new_name = ""
+        print(i, character)
+        if character.islower():
+             character.isupper()
+
     return new_name
 
 
